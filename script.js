@@ -30,7 +30,7 @@ function textGenerator (wordsN) {
         let randomLengthWord = Math.round(Math.random()*(12-3+1))+3;
         console.log(`randomLengthWord = ${randomLengthWord}`)
         for (let j = 0; j < randomLengthWord; j++) {
-            let randomLetter = String.fromCharCode
+            let randomLetter = String.fromCodePoint
             (Math.round(Math.random()*(90-65))+65);
             word += (i === 0 && j === 0) ? randomLetter : randomLetter.toLowerCase();
         }
@@ -58,12 +58,12 @@ let tasks = [];
 function taskArray (nameTask, mass) {
     let tempTask = nameTask.toLowerCase();
     if (mass.length < 1) mass[mass.length] = tempTask;
-    else {
-        for (let i = mass.length-1; i > -1; i--) {
-            if (mass[i] >= tempTask) {
-                mass[i+1] = mass[i];
-                mass[i] = tempTask;
-            }
+    else mass[mass.length] = tempTask;
+    for (let i = mass.length-1; i > 0; i--) {
+        if (mass[i-1] > mass[i]) {
+            let temp = mass[i];
+            mass[i] = mass[i-1];
+            mass[i-1] = temp;
         }
     }
     return mass;
