@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>
+        ДЗ 5. Строки
+    </h1>
+    <h2>
+        Задачи
+    </h2>
+    <ol>
+        <li>
+            <p>
+                Написать функцию , которая принимает строку и подсчитывает в ней число пробелов и тегов &lt;br/&gt;
+                результат в виде alert « Вы ввели стоку: ……………., в ней ХХ пробелов и УУ переводов строки»
+            </p>
+            <form action="#" autocomplete="off" name="enteredText" id="enteredText">
+                <fieldset>
+                    <legend>Поле для отправки текста в тег &lt;p&gt; &lt;p/&gt;</legend>
+                    <textarea style="width: 400px; height: 120px" id="areaText">
+Белеет парус одинокой
+В тумане моря голубом!..
+Что ищет он в стране далекой?
+Что кинул он в краю родном?..
+            </textarea>
+                    <p id="inText"></p>
+                    <button onclick="sendText()">
+                        Получить текст
+                    </button>
+                    <button onclick="startCountSpaceBr()">
+                        Обработать текст
+                    </button>
+
+                </fieldset>
+            </form>
+        </li>
+        <li>
+            <p>
+                Написать функцию , которая принимает количество слов и генерирует текст из этого количества слов
+                <br/>
+                Дополнительно*: использовать Math.random() для генерации кода символа
+            </p>
+            <button onclick="textGeneratorIn()">
+                Запустить функцию
+            </button>
+            <p>
+                Принятое количкство слов: <span class="wordsNOut"></span>
+            </p>
+            <p>
+                Результат: <span class="search-out"></span>
+            </p>
+        </li>
+        <li>
+            <p>
+                Написать функцию , которая принимает строку и слово и возвращает массив всех положений данного слова в строке
+            </p>
+            <button onclick="startIndexSearch()">
+                Запустить функцию
+            </button>
+            <p>
+                Принятая строка: <span class="getString"></span>
+            </p>
+            <p>
+                Принятое слова для поиска: <span class="getWord"></span>
+            </p>
+            <p>
+                Полученный массив индексов положения слова: <span class="outIndices"></span>
+            </p>
+        </li>
+        <li>
+            <p>
+                Написать функцию , которая принимает название задачи и добавляет ее в массив по алфавиту
+            </p>
+            <button onclick="startTaskArray()">
+                Запустить функцию
+            </button>
+<!--            <p>-->
+<!--                Текущий массив заадч: <span class="currentTaskName"></span>-->
+<!--            </p>-->
+            <p>
+                Принятоте название задачи: <span class="getTaskName"></span>
+            </p>
+            <p>
+                Полученный массив задач: <span class="outTasksArray"></span>
+            </p>
+        </li>
+    </ol>
+</body>
+</html>
