@@ -1,2 +1,2 @@
-# fp-lesson-4
-arrays and functions
+# fp-lesson-6
+Callbacks and objects
